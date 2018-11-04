@@ -23,7 +23,8 @@
         <img 
           src="/img/{{ .Params.Cover }}" 
           class="post-cover" 
-          {{ with .Params.Alt }} alt="{{ . }}" {{ end }}
+          {{ with .Params.cover_alt }} alt="{{ . }}" {{ end }}
+          {{ with .Params.cover_title }} title="{{ . }}" {{ end }}
         />
       {{ end }}
 

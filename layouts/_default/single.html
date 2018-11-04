@@ -18,10 +18,11 @@
 
     {{ if .Params.Cover }}
       <img 
-        src="/img/{{ .Params.Cover }}" 
-        class="post-cover" 
-        {{ with .Params.Alt }} alt="{{ . }}" {{ end }}
-      />
+          src="/img/{{ .Params.Cover }}" 
+          class="post-cover" 
+          {{ with .Params.cover_alt }} alt="{{ . }}" {{ end }}
+          {{ with .Params.cover_title }} title="{{ . }}" {{ end }}
+        />
     {{ end }}
 
     <div class="post-content">
