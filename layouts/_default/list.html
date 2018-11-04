@@ -19,8 +19,12 @@
         </span>
       {{ end }}
 
-      {{ with .Params.Cover }}
-        <img src="/img/{{ . }}" class="post-cover" />
+      {{ if .Params.Cover }}
+        <img 
+          src="/img/{{ .Params.Cover }}" 
+          class="post-cover" 
+          {{ with .Params.Alt }} alt="{{ . }}" {{ end }}
+        />
       {{ end }}
 
       <div class="post-content">
