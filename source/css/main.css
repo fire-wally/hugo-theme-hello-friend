@@ -76,6 +76,10 @@ a {
   color: inherit;
 }
 
+a:hover {
+  color: var(--orange);
+}
+
 img {
   display: block;
   max-width: 100%;
